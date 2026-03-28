@@ -33,23 +33,66 @@ Watt Watch is a privacy-first, edge AI-powered energy monitoring system designed
 | **AI/ML** | YOLOv8 (Ultralytics), OpenCV, PyTorch |
 | **Data Storage** | JSONL (Local Logs), SQLite (Cloud Simulation) |
 
-## 🚀 Installation
 
-### Backend Setup
+## 🚀 Installation & Setup Instructions
+
+To get Watt Watch up and running, follow these steps. The project is primarily composed of a Python backend service and a conceptual Next.js frontend (implied by technologies).
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/Utsav9163/Watt_Watch.git
+cd Watt_Watch
+```
+
+### 2. Backend Setup (Python)
+
+Navigate to the `backend` directory, set up a virtual environment, and install dependencies.
+
 ```bash
 cd backend
-python -m venv venv
-source venv/bin/activate  # Or venv\Scripts\activate on Windows
+
+# Create a Python virtual environment
+python3 -m venv venv
+
+# Activate the virtual environment
+source venv/bin/activate  # On Windows: `venv\Scripts\activate`
+
+# Install required Python packages
 pip install -r requirements.txt
+
+# Copy the example environment file and configure it
+cp .env.example .env
+# Open .env and adjust variables as needed (e.g., API keys, database settings)
 ```
 
-### Frontend Setup
+### 3. Running the Backend
+
+Once dependencies are installed and the `.env` file is configured, you can start the FastAPI backend server.
+
 ```bash
-cd frontend
-npm install
-cp .env.local.example .env.local # Configure your API URL
-npm run dev
+# From the 'backend' directory, with virtual environment activated
+python main.py
+# Or, if using uvicorn directly (common for FastAPI):
+# uvicorn main:app --host 0.0.0.0 --port 8000 --reload
 ```
+The backend will typically be accessible at `http://localhost:8000`.
+
+### 4. Frontend Setup (Conceptual, Next.js)
+
+While a specific `frontend` directory is not provided in the structure, the use of Next.js implies a frontend component. If a frontend exists, its setup would typically involve:
+
+```bash
+# Navigate to the frontend directory (if it exists)
+# cd ../frontend # Assuming 'frontend' is a sibling to 'backend'
+
+# Install Node.js dependencies
+npm install # or `yarn install`
+
+# Start the development server
+npm run dev # or `yarn dev`
+```
+The frontend would then be accessible, commonly at `http://localhost:3000`.
 
 ## 💡 Usage
 
