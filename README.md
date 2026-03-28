@@ -154,11 +154,17 @@ Please ensure to create and configure your `.env` file based on `.env.example` f
 ## 🤝 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request with descriptive changes.
 
+## 🙏 Acknowledgments
+
+*   **FastAPI**: For providing a modern, fast (high-performance) web framework for building APIs with Python.
+*   **Next.js**: For the robust framework for building React applications.
+*   **YOLO Models**: For the excellent real-time object detection capabilities critical to the system's AI core.
+*   **Node.js & Python Communities**: For their invaluable tools and extensive libraries.
+
 ## 📜 License
 Distributed under the MIT License.
 
 --- 
-
 **Maintained by Utsav9163**
 🔗 [Repository URL](https://github.com/Utsav9163/Watt_Watch)
 ✨ If you found this project helpful, please consider starring it!
