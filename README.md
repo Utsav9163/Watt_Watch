@@ -124,6 +124,26 @@ Watt_Watch/
 │   └── lib/                # API client and aggregators
 └── event_logs/             # Persistent JSONL data
 ```
+## ⚙️ Configuration Options
+
+Configuration for the backend is handled via environment variables, specified in the `.env` file. A `.env.example` file is provided in the `backend/` directory as a template.
+
+**Example `.env` (backend):**
+
+```env
+# FastAPI server settings
+SERVER_HOST=0.0.0.0
+SERVER_PORT=8000
+
+# YOLO model settings
+MODEL_PATH=./models/yolov8s.pt # Example path
+CONFIDENCE_THRESHOLD=0.25
+IOU_THRESHOLD=0.7
+
+# Event logging settings
+EVENT_LOGS_DIR=./event_logs
+```
+Please ensure to create and configure your `.env` file based on `.env.example` for proper system operation.
 
 ## 🌐 API Reference
 - **POST /detect**: Standard pose/object detection.
